@@ -10,6 +10,7 @@
 - Converting list to a set removes duplicates.
 - Can join two sets using the union() or update() method or | symbol.
 - Intersection returns a set of items which are in both the sets or using & symbol.
+- <= checks if a set is a subset of another.
 - Checking subset and superset:
     subset == issubset() & superset == superset()
 - Difference returns a collection of items that seperates two sets. We can use .difference() or the - symbol.
