@@ -81,3 +81,110 @@ def remove_item(items, item):
     if item in result:
         result.remove(item)
     return result
+
+# 11
+def sum_of_numbers(num):
+    total = 0
+    for i in range(num + 1):
+        total += i
+    return total
+
+# 12
+def sum_of_evens(num):
+    total = 0
+    for i in range(num + 1):
+        if i % 2 == 0:
+            total += i
+    return total
+
+# 13 
+def sum_of_odds(num):
+    total = 0
+    for i in range(num + 1):
+        if i % 2 == 1:
+            total += i
+    return total
+
+# Exercise Level: 2
+
+# 1
+def even_and_odds(num):
+    t_even = 0
+    t_odd = 0
+    for i in range(num + 1):
+        if i % 2 == 0:
+            t_even += 1
+        else:
+            t_odd += 1
+    return f"The number of odds are {t_odd}.\nThe number of evens are {t_even}."
+
+# 2
+def factorial(num):
+    x = int(num)
+    fact = 1
+    for i in range(1, x + 1):
+        fact *= i
+    return fact
+
+# 3
+def is_empty(value):
+    return len(value) == 0
+
+# 4
+def list_func_mean(value):
+    total = 0
+    for i in value:
+        total += i
+    return total / len(value)
+
+# 5
+def list_func_mode(value):
+    highest = 0
+    mode = None
+    for n in value:
+        c = value.count(n)
+        if c > highest:
+            highest = c
+            mode = n
+    return mode
+
+# 6
+def list_func_median(nums):
+    s = sorted(nums)
+    n = len(s)
+    mid = n // 2
+
+    if n % 2 == 1:
+        return s[mid]
+    return (s[mid - 1] + s[mid]) / 2
+
+# 7
+def greet(name = "Guest"):
+    return f"Hello {name}!"
+
+# 8
+def show_args(**val):
+    pairs = []
+    for key, value in val.items():
+        pairs.append(f'{key} : {value}')
+    return "Received: " + ",".join(pairs)
+
+# Excercise Level: 3
+
+# 1
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# 2
+def is_unique(items):
+    return len(set(items)) == len(items)
+
+# 3
+def is_same_type(items):
+    return len({type(item) for item in items}) <= 1
+
