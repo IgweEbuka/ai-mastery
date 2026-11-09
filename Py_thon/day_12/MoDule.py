@@ -12,15 +12,13 @@
     * random module: A random module which gives us a random number between 0 and 0.9999.
         The random module:
         .choice(lst) = one random item.
-        .sample(lst, n) = 2 different items.
-        .choices(lst, ) = 
+        .sample(lst, k) = returns k items from cellection with no repetition.
+        .choices(lst, k) = random choices from iterable using k.
         .random() = returns a float from 0.0 up to, but not including, 1.0.
         .randint(a, b) returns a random integer from a to b, with both ends included. 
         .randrange(start, stop, step) works like range(), so the stop value is excluded.
         .uniform(a, b) returns a random float between a and b.
         .shuffle(lst) = rearranges the list in place and returns None.
-
-
 """
 
 def generate_full_name(firstname, lastname):
@@ -47,4 +45,47 @@ def user_id_gen_by_user():
         print("".join(random.choices(chars, k=length)))
 
 
-print(user_id_gen_by_user())
+# Exercise Level: 2
+
+# 1
+def list_of_hexa_colours(n):
+    hexa_chars = '0123456789abcdef'
+    colours = []
+    for _ in range(n):
+        colour = "#" + "".join(random.choices(hexa_chars, k = 6))
+        colours.append(colour)
+    return colours
+
+# 2
+def list_of_rgb_colors(n):
+    colors = []
+    for _ in range(n):
+        r = random.randint(0, 255)
+        g = random.randint(0, 255)
+        b = random.randint(0, 255)
+        colors.append(f'rgb({r}, {g}, {b})')
+    return colors
+
+# 3
+
+def generate_colours(colour_type, n):
+    if colour_type == "hexa":
+        return list_of_hexa_colours(n)
+    elif colour_type == "rgb":
+        return list_of_rgb_colors
+    else:
+        raise ValueError(f"colour_type must be 'hexa' or 'rgb', got{colour_type!r}")
+
+# Exercise Level: 3
+
+# 1
+def shuffle_list(lst):
+    result = lst.copy()
+    random.shuffle(result)
+    return result
+    
+ages = [12, 49, 32, 23, 25, 10, 7]
+
+# 2
+def unique_random_number(count=7, low = 0, high = 9):
+    return random.sample(range(low, high + 1), count)
