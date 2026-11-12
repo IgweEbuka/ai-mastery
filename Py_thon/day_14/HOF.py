@@ -147,4 +147,10 @@ squared = map(lambda x: x ** 2, numbers)
 evens = filter(lambda x: x % 2 == 0, squared)
 total = reduce(lambda a, b: a + b, evens) 
 
-print(total)
+
+def count_starting_letters(countries):
+    counts = {}
+    for country in countries:
+        letter = country[0]
+        counts[letter] = counts.get(letter, 0) + 1
+    return counts

@@ -1,6 +1,7 @@
 """
 - Modules are files containing a set of codes or functions which can be included to an application.
 - They can be imported using (import).
+- With dir or help built-in commands it is possible to know the available functions in a certain module.
 - When importing you can name the import as something else by using as.
 - They can also have their functions imported using: From Mod import func.
 - There are specific in-built models that possess specific functions:
