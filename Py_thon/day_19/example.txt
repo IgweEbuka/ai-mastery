@@ -1,0 +1,3 @@
+This is a placeholder for an example used on day_19 to undestand file handling.
+This is the second line.
+This is the third.
