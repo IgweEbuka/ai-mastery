@@ -5,6 +5,8 @@
 - In is used to check the presence of an item in a list.
 - To add an item to the end of a list use .append().
 - To insert at an index use .insert().
+- .split() allows you to divide a string into a list of substrings based on a delimeter.
+- .join() converts elements of an iterable to a string.
 - To remove use .remove(), pop() removes a specified index and 'del' which removes an entire collection or a single item. 
 - Use copy() to clone an original list so changes to the copy will not affect the main list.
 - To join lists we can use (+) and extend() to add a list to the end of another list.
