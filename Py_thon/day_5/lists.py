@@ -2,6 +2,7 @@
 - Negative and Postive indexing applies to lists.
 - Unpacking also applies to lists.
 - Slicing is applicable here as well.
+- List * number repeats that least over the specified number into a singular list.
 - In is used to check the presence of an item in a list.
 - To add an item to the end of a list use .append().
 - To insert at an index use .insert().
